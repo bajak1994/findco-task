@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ruleset name="FindCO">
+    <description>WordPress Coding Standards</description>
+    <arg name="basepath" value="."/>
+    <file>./</file>
+    <file>./src</file>
+    <file>./tests</file>
+
+    <!-- Use the WordPress core ruleset -->
+    <rule ref="WordPress"/>
+
+    <!-- Exclude directories that do not need to be checked -->
+    <exclude-pattern>./node_modules/</exclude-pattern>
+    <exclude-pattern>./vendor/</exclude-pattern>
+
+    <!-- Additional rules or customization can be added here -->
+</ruleset>
