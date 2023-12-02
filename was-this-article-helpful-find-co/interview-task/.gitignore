@@ -1,0 +1,7 @@
+#===================================#
+#       Vendor and npm Files        #
+#===================================#
+/node_modules/
+/vendor/
+/dist/
+package-lock.json
