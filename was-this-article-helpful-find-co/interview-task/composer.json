@@ -5,7 +5,7 @@
   },
   "autoload": {
     "psr-4": {
-        "FindCO\\": "src/"
+        "App\\": "app/"
     }
   },
   "require-dev": {

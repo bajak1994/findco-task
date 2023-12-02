@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: {
     index: './assets/scripts/index.js',
+    admin: './assets/scripts/admin/admin.js',
   },
   output: {
     filename: '[name].js',
@@ -32,6 +33,14 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [require('autoprefixer')],
+              },
+            },
+          },
           'sass-loader',
         ],
       },
@@ -46,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'index.css',
+      filename: '[name].css',
     }),
   ],
 };
